@@ -76,7 +76,7 @@
         let validOrder = true;
    
         // Fetch payment details on page load
-        fetch('http://localhost:5001/api/payment-info')
+        fetch('/api/payment-info')
             .then(response => response.json())
             .then(data => {
                 if (data.amount && data.itemName) {
@@ -115,7 +115,7 @@
                 amount: currentAmount
             };
    
-            fetch('http://localhost:5001/api/processPayment', {
+            fetch('/api/processPayment', {
                 method: 'POST',
                 headers: {
                     'Content-Type': 'application/json'
