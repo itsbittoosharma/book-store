@@ -103,7 +103,7 @@
             if (!validOrder) {
                 alert("Payment failed. Redirecting...");
                 setTimeout(() => {
-                    window.location.href = "/api/order/complete?status=failure"; 
+                    window.location.href = "https://orderservice-8.onrender.com/api/order/complete?status=failure"; 
                 }, 2000);
                 return;
             }
@@ -127,12 +127,12 @@
                 if (data.success) {
                     alert("Payment successful! Redirecting...");
                     setTimeout(() => {
-                        window.location.href = "/api/order/complete?status=success"; 
+                        window.location.href = "https://orderservice-8.onrender.com/api/order/complete?status=success"; 
                     }, 5000);
                 } else {
                     alert("Payment failed. Redirecting...");
                     setTimeout(() => {
-                        window.location.href = "/api/order/complete?status=failure"; 
+                        window.location.href = "https://orderservice-8.onrender.com/api/order/complete?status=failure"; 
                     }, 2000);
                 }
             })
